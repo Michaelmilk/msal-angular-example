@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
-  clientID: '57fb7914-e5e8-4d4c-a358-d097815ead0a',
-  graphScopes: ["openid", "profile"],
+  clientID: '4723f11e-e7a6-48c8-b985-add752411a2d',
+  graphScopes: ["openid", "profile", "User.Read", "Mail.Send", "Contacts.Read", "People.Read"],
   signUpSignInPolicy: '',
-  tenant: 'careportfol.io'
+  tenant: 'microsoft.onmicrosoft.com'
 };

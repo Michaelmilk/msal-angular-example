@@ -13,6 +13,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,11 +27,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    HttpClientModule,
     [MsalModule.forRoot({
       clientID: environment.clientID,
       graphScopes: environment.graphScopes,
       signUpSignInPolicy: environment.signUpSignInPolicy,
-      tenant: environment.tenant
+      tenant: environment.tenant,
+      redirectUrl: "http://localhost:4200"
     })]
   ],
   providers: [],
