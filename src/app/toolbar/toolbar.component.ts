@@ -33,6 +33,8 @@ export class ToolbarComponent implements OnInit {
     }
 
     testFuction() {
+        let user = this.msalService.getUser();
+        console.log("uesr1", user);
         this.msalService.getUser().then((user: any) => {
             console.log("uesr", user);
         })
@@ -45,15 +47,15 @@ export class ToolbarComponent implements OnInit {
             console.log("token", token);
 
             const headers = new HttpHeaders({ 'Authorization': `Bearer ${token}` });
-            this.httpClient.get(`${this.graphUrl}/me`, {headers: headers}).subscribe((userInfo: any) => {
+            this.httpClient.get(`${this.graphUrl}/me`, { headers: headers }).subscribe((userInfo: any) => {
                 console.log("userinfo", userInfo);
             });
 
-            this.httpClient.get(`${this.graphUrl}/me/photo/$value`, {headers: headers}).subscribe((photo: any) => {
+            this.httpClient.get(`${this.graphUrl}/me/photo/$value`, { headers: headers }).subscribe((photo: any) => {
                 console.log("userinfo", photo);
             });
 
-            this.httpClient.get(`${this.graphUrl}/users/danipi@M365x342201.onmicrosoft.com`, {headers: headers}).subscribe((photo: any) => {
+            this.httpClient.get(`${this.graphUrl}/users/danipi@M365x342201.onmicrosoft.com`, { headers: headers }).subscribe((photo: any) => {
                 console.log("userinfo", photo);
             });
         })
