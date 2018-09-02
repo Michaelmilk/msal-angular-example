@@ -53,7 +53,7 @@ export class ToolbarComponent implements OnInit {
                 console.log("userinfo", photo);
             });
 
-            this.httpClient.get(`${this.graphUrl}/users/danipi@microsoft.com`, {headers: headers}).subscribe((photo: any) => {
+            this.httpClient.get(`${this.graphUrl}/users/danipi@M365x342201.onmicrosoft.com`, {headers: headers}).subscribe((photo: any) => {
                 console.log("userinfo", photo);
             });
         })
